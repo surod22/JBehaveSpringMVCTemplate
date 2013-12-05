@@ -16,7 +16,7 @@
 	
 	<bean id="insertStockPage" class="org.jbehave.web.InsertStockPage">
 		<qualifier value="insertStockPage"></qualifier>
-		<property name="stockUrl" value="http://localhost:8080/JBehaveWeb/"></property>
+		<property name="stockUrl" value="http://localhost:8080/"></property>
 	</bean>
 	
 	<bean id="showStatusStockPage" class="org.jbehave.web.ShowStockStatusPage">

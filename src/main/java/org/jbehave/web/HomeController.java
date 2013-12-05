@@ -37,13 +37,12 @@ public class HomeController {
 	@RequestMapping(value="/", method=RequestMethod.POST )
 	public ModelAndView submitForm(@ModelAttribute("stockInfo")StockForm stockForm) {
 
-		Stock stock = getStock(stockForm.getThreshold());
-		stock.setTradeAt(stockForm.getTradeAt());
-		return  new ModelAndView("showstatus", "status", stock.getStatus());
+		Stock stock = getStock(stockForm.getThreshold(), stockForm.getTradeAt());
+		return new ModelAndView("showstatus", "status", stock.getStatus());
 	}
 	
-	public Stock getStock(double threshold) {
-		return this.tradingService.addNewStock(threshold);
+	public Stock getStock(double threshold, double tradeAt) {
+		return this.tradingService.addNewStock(threshold, tradeAt);
 	}
 	
 }

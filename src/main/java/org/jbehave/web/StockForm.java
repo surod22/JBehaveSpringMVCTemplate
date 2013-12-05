@@ -14,9 +14,17 @@ public class StockForm {
 		this.name = name;
 	}
 
+    public void setThreshold(double threshold){
+        this.threshold = threshold;
+    }
+
 	public double getThreshold() {
 		return threshold;
 	}
+
+    public void setTradeAt(double tradeAt){
+        this.tradeAt = tradeAt;
+    }
 
 	public double getTradeAt() {
 		return tradeAt;
