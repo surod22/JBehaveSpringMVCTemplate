@@ -15,11 +15,11 @@ public class StockForm {
 	}
 
 	public double getThreshold() {
-		return 1;
+		return threshold;
 	}
 
 	public double getTradeAt() {
-		return 2;
+		return tradeAt;
 	}
 
 	@Override
