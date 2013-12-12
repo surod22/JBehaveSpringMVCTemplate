@@ -32,5 +32,8 @@ public class PageUtils {
 	public void setWebDriver(WebDriver webDriver) {
 		this.webDriver = webDriver;
 	}
-	
+
+    public void close() {
+        webDriver.close();
+    }
 }

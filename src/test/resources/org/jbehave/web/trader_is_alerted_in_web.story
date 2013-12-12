@@ -1,10 +1,6 @@
-Scenario: trader should insert stock data in a web page interface. trader should be not alerted below threshold and should be alerted above threshold after it has been inserted.
+Scenario: User can submit feedback
 
-Given trader starts web application
-When trader inserts stock <symbol> with threshold <threshold> and trade at <tradeAt>
-Then web page should show an <status> message
-
-Examples:
-|symbol|threshold|tradeAt|status|
-|STK1|5|4|OFF|
-|STK1|5|14|ON|
+When I submit a feedback with my name, the recipient’s name and the feedback
+Then I should see the feedback
+And I should see the recipient’s name
+And I should see my name
